@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.col {
+    margin-bottom: 12px;
+    background-color: blueviolet;
+}
+
+.box-img {
+    width: 100%;
+    position: relative;
+}
+.box-img > img {
+    width: 100%;
+    
+}
+.box-img > span {
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    background-color: #FBDDB3;
+}
+.price > span {
+    text-decoration: line-through;
+}
+.discount > span {
+    color: red;
+}
+
+
+
+/* Reponsive Mobile */
+
+@media screen and (max-width: 576px) {
+
+    .m-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+}

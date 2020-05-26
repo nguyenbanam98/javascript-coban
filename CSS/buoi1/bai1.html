@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>CSS - Bài 1</title>
+
+    <!-- Style CSS -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        .wrapper {
+            width: 100%;
+        }
+
+        .login {
+            margin: 100px auto;
+            width: 230px;
+        }
+        a {
+            text-decoration: none;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        /* .login > div {
+            margin-bottom: 20px;
+        } */
+        .login-input {
+            width: 100%;
+        }
+        .login-input > input {
+            width: 100%;
+            height: 25px;
+            margin: 10px 0 10px;
+            outline-style: none;
+            padding-left: 5px;
+        }
+        .login-hero {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            
+        }
+        .auth-login {
+            height: 30px;
+            background-color: #007DFF;
+            text-align: center;
+            border-radius: 5px;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        .auth-login a {
+            line-height: 30px;
+            color: #fff;
+            font-size: 12px;
+            
+        }
+        .auth-login_face {
+            background-color: blue;
+        }
+        div > h4 {
+            text-align: center;
+        }
+        .auth-login-hover:hover {
+            background-color: rgb(21, 21, 139);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="login">
+            <h2>Login</h2>
+            <div>
+                <p>Nhập email: </p>
+            </div>
+            <div class="login-input"><input type="text" placeholder="Vui lòng nhập email"></div>
+            <div>
+                <p>Nhập mật khẩu: </p>
+            </div>
+            <div class="login-input"><input type="password" placeholder="Vui lòng nhập password"></div>
+            <div class="login-hero">
+                <a href="#">Bạn quên mật khẩu</a>
+                <span> Create an account?<a href="#">Sign up</a></span>
+            </div>
+            <div class="auth-login auth-login-hover">
+                <a href="#">Login</a>
+            </div>
+            <div><h4>Or Login</h4></div>
+            <div class="auth-login auth-login_face ">
+                <a href="#"><i class="fab fa-facebook"></i> Login With Facebook</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

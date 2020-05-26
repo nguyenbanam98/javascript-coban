@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS2 - Bài 1</title>
+    <!-- Style css -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            width: 20%;
+            border: 1px solid black;
+        }
+        .box-img {
+            width: 100%;
+            position: relative;
+            
+
+        }
+        .box-img > img {
+            width: 100%;
+        }
+        .box-img > span {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: #FBDDB3;
+        }
+        .price > span {
+            text-decoration: line-through;
+        }
+        .discount > span {
+            color: red;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box-img">
+            <img src="./images/bai1.jpg" alt="cho con">
+            <span>Giảm giá 30%</span>
+        </div>
+        <div class="price"><span>Giá gốc: 100 đống</span></div>
+        <div class="discount"><span>Giảm giá: 70 đống</span></div>
+
+    </div>
+    
+</body>
+</html>

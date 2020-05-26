@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS2 - Bài2</title>
+    <!-- Style css -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 240px;
+            margin-left: 20px;       
+            box-shadow: 5px 4px 8px 0 rgba(0, 0, 0, 0.2);
+            
+        }
+        .container > div {
+            margin-bottom: 10px;
+        }
+
+        .box-img {
+            width: 100%;
+            position: relative;
+        }
+
+        .box-img>img {
+            width: 100%;
+        }
+
+        
+
+        .box-hot {
+            top: 0;
+            display: block;
+            position: absolute;
+            background-color: red;
+            border-left: 3px solid #1CBA63;
+            color: #fff;
+        }
+
+        .box-discount {
+            display: block;
+            position: absolute;
+            background-color: #1CBA63;
+            color: #fff;
+            right: 0;
+            top: 0;
+
+            
+        }
+
+        .box-about {
+            width: 100%;
+            text-align: center;
+        }
+
+        span {
+            color: red;
+            font-weight: 700;
+
+        }
+
+        .price > span {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box-img">
+            <img src="./images/bai2.png" alt="dien thoai">
+            <span class="box-hot">HOT</span>
+            <span class="box-discount">-12%</span>
+        </div>
+        <div class="box-about">
+            <p>Apple Iphone 11 Pro - 64GB chính hãng VN/A</p>
+        </div>
+        <div class="price">
+            <span>30.990.000 đ</span>
+        </div>
+        <div>
+            <span>20.290.000 đ</span>
+        </div>  
+        
+    </div>
+</body>
+
+</html>

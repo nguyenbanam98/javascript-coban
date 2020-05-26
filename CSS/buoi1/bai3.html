@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>CSS - Bài 3</title>
+    <!-- Style css -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: 0;
+            text-decoration: none;
+        }
+        a {
+            color: black;
+        }
+        ul {
+            width: 200px;
+        
+        }
+        ul > li  {
+            height: 30px;
+            background-color: #AAD862;
+            border-bottom: 1px solid beige;
+            line-height: 30px;
+            cursor: pointer;
+            list-style: none;
+           
+        }
+        ul > li > i {
+            padding-left: 10px;
+            font-size: 10px;
+            padding-right: 10px;
+            color: #fff;
+        }
+        .active {
+            background-color: #78B43D;
+        }
+        ul > li:hover {
+            background-color: #78B43D;
+        }
+       .menu-2 {
+           display: none;
+           margin-left: 200px;
+           margin-top: -30px;
+       }
+       .menu-2 > li {
+           background-color: #78B43D;
+       }
+       .active:hover .menu-2 {
+           display: block;
+           
+       }
+    </style>
+
+</head>
+<body>
+    <ul>
+        <li class="active">
+            <i class="fas fa-chevron-right"></i>
+            <a href="#">Tin tức trong ngày</a>
+            <ul class="menu-2">
+                <li><i class="fas fa-chevron-right"></i><a href="#">Tin tức trong ngày</a></li>
+                <li><i class="fas fa-chevron-right"></i><a href="#">Bóng đá</a></li>
+                <li><i class="fas fa-chevron-right"></i><a href="#">Thế giới</a></li>
+                <li><i class="fas fa-chevron-right"></i><a href="#">Thời trang</a></li>
+                <li><i class="fas fa-chevron-right"></i><a href="#">Pháp luật</a></li>
+                <li><i class="fas fa-chevron-right"></i><a href="#">Thời trang Hi-tech</a></li>
+            </ul>
+        </li>
+        <li><i class="fas fa-chevron-right"></i><a href="#">Bóng đá</a></li>
+        <li><i class="fas fa-chevron-right"></i><a href="#">Thế giới</a></li>
+        <li><i class="fas fa-chevron-right"></i><a href="#">Thời trang</a></li>
+        <li><i class="fas fa-chevron-right"></i><a href="#">Pháp luật</a></li>
+        <li><i class="fas fa-chevron-right"></i><a href="#">Thời trang Hi-tech</a></li>
+    </ul>
+</body>
+</html>
