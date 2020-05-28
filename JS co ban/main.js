@@ -29,32 +29,32 @@ for ( i = 0; i < arr.length; i++) {
 console.log('****************');
 
 //Cộng tổng các số chia hết cho 5 của mảng
-var s = 0;
+var sum = 0;
 for ( i = 0; i < arr.length; i++) {
     if(arr[i] % 5 == 0) {
-        s = s + arr[i];
+        sum = sum + arr[i];
     }
 }
-console.log(s);
+console.log(sum);
 
 console.log('****************');
 //Tìm ra tích 3 số đầu của mảng array
 
-var s3 = 0;
+var mult = 0;
 for (var i = 0; i < 3; i++) {
-    s3 = s3 + arr[i];
+    mult = mult + arr[i];
 }
-console.log(s3);
+console.log(mult);
 
 console.log('****************');
 
 //Tính tổng 3 phần tử cuối của mảng
 
-var S = 0;
+var sumLast = 0;
  for ( i = arr.length - 1; i > arr.length - 4; i-- ) {
-   S = S + arr[i];
+    sumLast = sumLast + arr[i];
  }
- console.log(S);
+ console.log(sumLast);
 
  console.log('****************');
 

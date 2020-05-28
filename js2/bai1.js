@@ -13,8 +13,8 @@ console.log(odd);
 // in ra các số lớn hơn hoặc bằng 5 trong mảng
 console.log('Các số >= 5');
 
-var num5  = arr.filter(num => num >= 5);
-console.log(num5);
+var fiveGreater = arr.filter(num => num >= 5);
+console.log(fiveGreater);
 
 //in ra các số chia hết cho 5 trong mảng
 console.log('Các số chia hết cho 5');
@@ -23,9 +23,9 @@ console.log(sub);
 //Tìm các số >5 của mảng và tăng các giá trị đó lên 1 đơn đơn vị
 console.log('Các số lơn hơn 5');
 
-var a = arr.filter( num => num > 5);
-var b = a.map(num => num + 1);
-console.log(b);
+var numbers = arr.filter( num => num > 5);
+var increases  = numbers.map(num => num + 1);
+console.log(increases);
 //dùng slice để copy mảng từ phần tử số 3 đến phần tử cuối cùng
 console.log('********');
 var arr1 = arr.splice(3);
