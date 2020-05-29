@@ -15,7 +15,7 @@
 // console.log(i)
 // như đã nói ở trên var không được hỗ trợ block scope, vì thế từ phiên bản ES6 thì let và const đã được giới thiệu
 // lúc này khi console.log(i) trình duyệt sẽ báo lỗi i is not defined, vì i chỉ tồn tại trong block của vòng lặp for,
-// đồng thời let cũng không cho redeclaring, ngược với var giống ví dụ dưới đây
+// đồng thời let cũng không cho redeclaring, ngược với var giống ví dụ dưới đ
 
 var number = 30;
 var number = 'số 30';
