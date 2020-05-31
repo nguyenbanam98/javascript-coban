@@ -26,18 +26,19 @@ async function run() {
     const num1Promise = promise1();
     const num2Promise = promise2(num1Promise)
 
-    const num2 = num2Promise;
+    const num1 = await num1Promise
+    const num2 = await num2Promise;
     try {
         const num3Promise = promise3(num2)
         const num3 = num3Promise;
-        return num3
+        return await num3
         
     } catch (error) {
         throw error;
     } 
 }
 run()
-    .then(res => console.log(res))
+    //.then(res => console.log(res))
     .catch(err => console.log(err))
 
 // const promise3 = function (value) {
