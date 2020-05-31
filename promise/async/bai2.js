@@ -24,14 +24,15 @@ async function run() {
     const num2 = await promise2(num1)
     try {
         const num3 = await promise3(num2)
-        console.log(num3 + ` - ${Date.now() - time}s`);
+        return num3
+        
     } catch (error) {
         throw error;
     } 
 }
 run()
-    .then(res => console.log(res))
-    .catch(err => console.log(err))
+    .then(res => console.log(res + ` - ${Date.now() - time}s`))
+    .catch(err => console.log(err + ` - ${Date.now() - time}s`))
 
 // const promise3 = function (value) {
 //     return new Promise ((resolve, reject) => {
