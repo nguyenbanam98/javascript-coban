@@ -9,11 +9,11 @@ const promise = new Promise((resolve, reject) => {
             resolve(data * 3)
         }, 2000);
     })
-     .then(data => new Promise((resolve, reject) => {
+ .then(data => new Promise((resolve, reject) => {
             if (data > 10) resolve(true)
             reject(false)
      })
-        .then(result => console.log(result))
-        .catch(err => console.log(err))
+ .then(result => console.log(result))
+ .catch(err => console.log(err))
     )
 )
