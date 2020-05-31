@@ -26,7 +26,6 @@ async function run() {
     const num1Promise = promise1();
     const num2Promise = promise2(num1Promise)
 
-    const num1 = num1Promise;
     const num2 = num2Promise;
     try {
         const num3Promise = promise3(num2)
