@@ -1,8 +1,10 @@
 const time = Date.now();
+
 const promise1 = function () {
    return new Promise ((resolve, reject) => {
        setTimeout(function() {
            resolve(2)
+           console.log(`Promise1 done: ${Date.now() -time}s`);
        }, 3000);
    })
 }
@@ -10,6 +12,7 @@ const promise2 = function (value) {
    return new Promise ((resolve, reject) => {
        setTimeout(function() {
            resolve(value * 3)
+           console.log(`Promise2 done: ${Date.now() -time}s`);
        }, 2000);
    })
 }
@@ -20,10 +23,14 @@ const promise3 = function (value) {
    })
 }
 async function run() {
-    const num1 = await promise1();
-    const num2 = await promise2(num1)
+    const num1Promise = promise1();
+    const num2Promise = promise2(num1Promise)
+
+    const num1 = num1Promise;
+    const num2 = num2Promise;
     try {
-        const num3 = await promise3(num2)
+        const num3Promise = promise3(num2)
+        const num3 = num3Promise;
         return num3
         
     } catch (error) {
@@ -31,8 +38,8 @@ async function run() {
     } 
 }
 run()
-    .then(res => console.log(res + ` - ${Date.now() - time}s`))
-    .catch(err => console.log(err + ` - ${Date.now() - time}s`))
+    .then(res => console.log(res))
+    .catch(err => console.log(err))
 
 // const promise3 = function (value) {
 //     return new Promise ((resolve, reject) => {
