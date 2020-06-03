@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <input type="text">
+
+    <script>
+
+        const input = document.querySelector('input')
+
+        input.addEventListener('keypress', myFunction)
+        function myFunction (value) {
+            value = input.value
+            clearTimeout(typing);
+            var typing = setTimeout(function () {
+                alert('ban da go ' + value);
+            }, 1000); 
+        }
+    </script>
+
+</body>
+
+</html>

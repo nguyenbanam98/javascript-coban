@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+        <form id="form">
+            <div class="form-group" action="#">
+                <label for="exampleInputEmail1">Email address</label>
+                <input id="email" type="email" class="form-control" 
+                    aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="email-err" class="form-text text-danger"></small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input id="pass" type="password"  class="form-control" 
+                    placeholder="Password">
+                <small id="pass-err" class="form-text text-danger"></small>
+            </div>
+            <button class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <script>
+
+        let form = document.getElementById('form')
+        let email = document.getElementById('email')
+        let password = document.getElementById('pass')
+        let email_err = document.getElementById('email-err')
+        let pass_err = document.getElementById('pass-err');
+        
+        form.addEventListener('submit', function (event) {
+            event.preventDefault()
+            update();
+        })
+        function update() {
+
+            let emailValue = email.value.trim()
+            let passValue = password.value.trim()   
+            if (emailValue === '') {
+                email_err.innerText = "Vui lòng nhập email"
+            } else {
+                email_err.innerText = 'Done'
+            }
+            if (passValue === '') {
+                pass_err.innerText = 'Vui lòng nhập password'
+            } else if(passValue.length < 8) {
+                pass_err.innerText = 'Password phải có ít nhất 8 ký tự'
+            } else  {
+                pass_err.innerText = 'Done'
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind</title>
+</head>
+<body>
+    <button>Add</button>
+
+   
+    <script>
+        const btn = document.querySelector('button')
+
+        const sinhVien = {
+            name: "Nam Nguyen",
+            age: 22
+        }
+      
+        btn.addEventListener('click', add.bind(sinhVien));
+        
+        function add(name, age) {
+            alert(this.name + ' có tuổi ' +  this.age)   
+        }
+         
+        
+        
+    </script>
+</body>
+</html>

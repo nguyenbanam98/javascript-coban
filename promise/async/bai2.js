@@ -39,7 +39,7 @@ async function run() {
 }
 run()
     //.then(res => console.log(res))
-    .catch(err => console.log(err))
+    .catch(err => console.log(err + ` thuc hien: ${Date.now() - time}`))
 
 // const promise3 = function (value) {
 //     return new Promise ((resolve, reject) => {
