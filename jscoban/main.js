@@ -10,6 +10,7 @@ for (var i = 0; i < arr.length; i++) {
 
 console.log('****************');
 
+
 //in ra số lẻ trong mảng 
 for ( i = 0; i < arr.length; i++) {
     if (arr[i] % 2 !== 0) {
