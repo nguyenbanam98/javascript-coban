@@ -25,35 +25,18 @@ const promise3 = function (value) {
 async function run() {
     const num1Promise = promise1();
     const num2Promise = promise2(num1Promise)
-
     const num1 = await num1Promise
     const num2 = await num2Promise;
+    const num3Promise = await promise3(num2)
     try {
-        const num3Promise = promise3(num2)
-        const num3 = num3Promise;
-        return await num3
+       
+        return await num3Promise
         
     } catch (error) {
         throw error;
     } 
 }
 run()
-    //.then(res => console.log(res))
+    .then(res => console.log(res))
     .catch(err => console.log(err + ` thuc hien: ${Date.now() - time}`))
 
-// const promise3 = function (value) {
-//     return new Promise ((resolve, reject) => {
-//         if (value > 10) resolve(true)
-//         reject(false)
-//     }).then(data => data)
-//       .catch(err => err)
-//     }
-//     async function run() {
-//         const num1 = await promise1()
-//         const num2 = await promise2(num1)
-//         const num3 = await promise3(num2)
-    
-//         console.log(num3 + ` - ${Date.now() - time}s`);
-        
-// }
-// run();
