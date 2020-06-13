@@ -1,8 +1,9 @@
 const time = Date.now()
 const num1 = new Promise ((resolve, reject) => {
-    setTimeout(function() {
-        resolve(1);
-    }, 4000);
+    // setTimeout(function() {
+    //     resolve(1);
+    // }, 4000);
+    
 })
 const num2 = new Promise ((resolve, reject) => {
     setTimeout(function() {
