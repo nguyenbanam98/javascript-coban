@@ -36,6 +36,8 @@
         let password = document.getElementById('pass')
         let email_err = document.getElementById('email-err')
         let pass_err = document.getElementById('pass-err');
+       
+        
         
         form.addEventListener('submit', function (event) {
             event.preventDefault()
@@ -45,19 +47,24 @@
 
             let emailValue = email.value.trim()
             let passValue = password.value.trim()   
-            if (emailValue === '') {
+            if (!emailValue) {
                 email_err.innerText = "Vui lòng nhập email"
+                
             } else {
-                email_err.innerText = 'Done'
+                email_err.innerText = ''
             }
-            if (passValue === '') {
+            if (!passValue) {
                 pass_err.innerText = 'Vui lòng nhập password'
+                return
+                
             } else if(passValue.length < 8) {
                 pass_err.innerText = 'Password phải có ít nhất 8 ký tự'
-            } else  {
-                pass_err.innerText = 'Done'
+                return
+            }  else {
+                pass_err.innerText = ''
             }
         }
+        
 
 
     </script>
