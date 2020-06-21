@@ -8,12 +8,12 @@
     <script>
 
         const input = document.querySelector('input')
-
-        input.addEventListener('keypress', myFunction)
+        let typing;
+        input.addEventListener('keyup', myFunction)
         function myFunction (value) {
             value = input.value
             clearTimeout(typing);
-            var typing = setTimeout(function () {
+            typing = setTimeout(function () {
                 alert('ban da go ' + value);
             }, 1000); 
         }
