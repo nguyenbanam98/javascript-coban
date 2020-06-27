@@ -33,4 +33,5 @@ result(person3.name)
 let time = setInterval(() => {
     console.log(new Date);
 }, 1000);
-clearInterval(time)
+clearInterval(time);
+
