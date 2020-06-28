@@ -1,9 +1,17 @@
 const express = require('express')
 const app = express()
 const path = require('path')
-const port = 3001
+const router = require('./router')
+const bodyParser = require('body-parser')
+const port = 3000
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
  
-app.use(express.static(path.join(__dirname, '/public')))
+// parse application/json
+app.use(bodyParser.json())
+ 
+app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('/', function (req, res) {
     let login = path.join(__dirname, 'public/index.html');
@@ -14,5 +22,6 @@ app.get('/home', function (req, res) {
     res.sendFile(home)
 })
 
- 
+app.use('/truyen', router)
+
 app.listen(port, () => console.log('Start server'))
