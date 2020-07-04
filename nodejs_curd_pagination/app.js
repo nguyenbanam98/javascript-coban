@@ -33,4 +33,4 @@ app.get('/user', (req, res) => {
 // routing
 app.use('/api/account', router)
 
-app.listen(3000, () => console.log('Start server'))
+app.listen(3001, () => console.log('Start server'))
