@@ -17,7 +17,7 @@ router.post('/', (req, res) => {
         .then(data => {
             if (data) 
                 return res.json('User nay da ton tai')            
-            return AccountModel.create({
+            AccountModel.create({
                 username: username,
                 password: password
             })
