@@ -7,7 +7,7 @@ const AccountModel = require('./models/Account.model')
 const app = express()
 
 // connecting to mongo
-mongoose.connect('mongodb://localhost/my_database', {
+mongoose.connect('mongodb://localhost/test_mongo', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
@@ -27,10 +27,8 @@ app.get('/user', (req, res) => {
     AccountModel.find({})
      .skip(SKIP)
      .limit(PAGE_SIZE)
-     .then(data => {
-        res.json(data)
-     })
-    .catch(err => res.status(500).json('Loi server'))
+     .then(data => res.json(data))
+     .catch(err => res.status(500).json('Loi server'))
 })
 // routing
 app.use('/api/account', router)

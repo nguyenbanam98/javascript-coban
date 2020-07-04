@@ -5,9 +5,7 @@ const AccountModel = require('../models/Account.model')
 //Lay du lieu
 router.get('/', (req, res) => {
     AccountModel.find({})
-     .then(data => {
-         res.json(data)
-     })
+     .then(data => res.json(data))
      .catch(err => res.status(500).json('Loi server'))
 })
 // Create 
@@ -17,14 +15,13 @@ router.post('/', (req, res) => {
 
     AccountModel.findOne({ username: username })
         .then(data => {
-            if (data) {
-                res.json('User nay da ton tai')
-            } else {
-                return AccountModel.create({
-                    username: username,
-                    password: password
-                })
-            }
+            if (data) 
+                return res.json('User nay da ton tai')            
+            return AccountModel.create({
+                username: username,
+                password: password
+            })
+            
         }
     )
      .then(data => res.json(data))
@@ -51,9 +48,7 @@ router.delete('/:id', (req, res) => {
 router.get('/:id', (req, res) => {
     const id = req.params.id;
     AccountModel.findOne({_id: id})
-     .then(data => {
-         res.json(data)
-     })
+     .then(data => res.json(data))
      .catch(err => res.status(500).json('Loi server'))
 })
 
