@@ -34,7 +34,7 @@ const deleteAccount = async (req, res, next) => {
     await Account.deleteOne({_id: accountID})
     return res.status(200).json({success: true})
 }
-
+// Pagination Account
 const paginationAccount = async (req, res, next) => {
     
     const PAGE_SIZE = 2;

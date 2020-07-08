@@ -1,4 +1,4 @@
-const router = require("express-promise-router")();
+const router = require("express-promise-router")()
 
 const AccountController = require('../controllers/AccountController')
 
