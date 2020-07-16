@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Students</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">	
+
+	<!-- Bootstrap 4 library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="./public/css/style.css">
+</head>
+
+<body>
+	<div class="container mt-5">
+		<div class="row">
+			<div class="col-3">
+				<h2>Thông tin sinh viên</h2>
+				<form id="studentForm">
+					<div class="form-group">
+						<label for="masv">Mã SV:</label>
+						<input type="text" class="form-control" id="masv" placeholder="Nhập MaSV" name="MaSV">
+					</div>
+					<div class="form-group">
+						<label for="hoten">Họ tên:</label>
+						<input type="text" class="form-control" id="hoten" placeholder="Nhập Họ tên" name="hoten">
+					</div>
+					<div class="form-group">
+						<label for="sdt">Điện thoại:</label>
+						<input type="text" class="form-control" id="sdt" placeholder="Nhập SDT" name="sdt">
+					</div>
+					<div class="form-group">
+						<label for="email">Email:</label>
+						<input type="email" class="form-control" id="email" placeholder="Nhập Email" name="email">
+					</div>
+
+					<button type="button" class="btn btn-success" onclick="ThemSinhVien()">Thêm sinh viên</button>
+					<button type="button" id="updateStudent" class="btn btn-primary"> Lưu</button>
+				</form>
+				
+			</div>
+			<div class="col-9">
+				<div class="container">
+					<h2>Danh sách sinh viên</h2>
+					<p> </p>
+					<table id="TableSinhVien" class="table">
+						<thead>
+							<tr>
+								<th>MaSV</th>
+								<th>HoTen</th>
+								<th>Email</th>
+								<th>Phone</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody id="tbodySinhVien">
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src="./public/js/DanhSachSinhVien.js"></script>
+	<script type="text/javascript" src="./public/js/main.js"></script>
+</body>
+
+</html>

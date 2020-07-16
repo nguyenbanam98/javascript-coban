@@ -1,0 +1,7 @@
+* {
+    font-size: 14px;
+}
+.trSinhVien:hover{
+    background-color: rgb(189, 197, 194);
+    cursor: pointer;
+}
